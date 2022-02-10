@@ -1,17 +1,70 @@
 body {
-    background-image: url('https://steamuserimages-a.akamaihd.net/ugc/1695024823120006318/A7F04F93EA4353BB31C494814C029D53145B1C0C/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false');
-    background-size: cover;
+    height: 100vh;
+    background-image: linear-gradient(30deg, limegreen, dodgerblue);
+    background-size: auto;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: 'Quintessential', cursive;
+    text-align: center;
 }
 
-div {
-    background: rgba(222, 204, 255, 0.7);
+h1 {
+    font-size: 40px;
+    color: honeydew;
+    margin: 10px;
+}
+
+h4 {
+    margin: 10px;
+}
+
+.container {
+    margin: auto auto;
     display: flex;
     justify-content: space-around;
-    align-items: flex-start;
-    align-content: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+    width: 800px;
 }
 
-p {
+.card {
+    margin: 20px;
+}
 
+.base {
+    display: flex;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transition: transform 0.6s ease-out .1ms;
+    transform-style: preserve-3d;
+}
+
+.card:hover .base {
+    transform: rotateY(180deg);
+}
+
+.question, .answer {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.question {
+    z-index: 2;
+    background: azure;
+}
+
+.answer {
+    z-index: 3;
+    background: black;
+    color: honeydew;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
 }
